@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="module" src="project-util.js"></script>
+<script>
+$(document).ready(function(){
+  $("p").click(function(){
+    const projecUtil = new ProjectUtil();
+    const result = projecUtil.miltiply( $("#multiply-left").val(),  $("#multiply-right").val());
+    $("#test").html(result)
+  });
+});
+</script>
+</head>
+<body>
+
+<div style="display:flex">
+    <input id="multiply-left"/>
+    <input id="multiply-right"/>
+    <p id="test"></p>
+</div>
+<p>Show Multiply result</p>
+</body>
+</html>
